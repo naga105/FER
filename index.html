@@ -19,9 +19,9 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-dark navbar-expand-sm  fixed-top">
+    <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Ristorante Con Fusion</a>
+            <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41" /></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -56,7 +56,7 @@
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
-          <div class="col-12 col-sm- 6">
+          <div class="col-12 col-sm-6">
             <h1>Ristorante con Fusion</h1>
             <p>
               We take inspiration from the World's best cuisines, and create a
@@ -64,7 +64,10 @@
               your culinary senses!
             </p>
           </div>
-          <div class="col-12 col-sm"></div>
+          <div class="col-12 col-sm-3 align-self-center">
+            <img src="img/logo.png" class="img-fluid" />
+          </div>
+          <div class=" col-12 mt-md-0 mt-4 col-sm-3 align-self-center"><button onClick="document.getElementById('forms').scrollIntoView();" class=" btn-width ml-md-5 border-0 bg-warning py-1 rounded "> <h6 class="align-middle text-margin">Reserve Table</h6></button></div>
         </div>
       </div>
     </header>
@@ -73,22 +76,26 @@
       <div class="row">
         <ol class="col-12 breadcrumb">
           <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                    <li class="breadcrumb-item active">Contact Us</li>
-                    </ol>
-                    <div class="col-12">
-                        <h3>Contact Us</h3>
-                        <hr />
-                    </div>
+
             </div>
             <div class="row row-content align-items-center">
-                <div class="col-12 col-sm-4 order-sm-last col-md-3">
+                <div class="col-12 col-sm-4 col-md-3 order-sm-last align-items-center">
                     <h3>Our Lipsmacking Culinary Creations</h3>
                 </div>
                 <div class="col col-sm col-md">
-                    <h2>Uthappizza</h2>
-                    <p>
-                        A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
-                    </p>
+                    <div class="media">
+
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/uthappizza.png" alt="Uthappizza">
+
+                        <div class="media-body">
+
+                            <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span> <span class=" ml-md-2 badge badge-pill badge-secondary">$4.99</span></h2>
+
+                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.</p>
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
 
@@ -97,24 +104,72 @@
                     <h3>This Month's Promotions</h3>
                 </div>
                 <div class="col col-sm col-md">
-                    <h2>Weekend Grand Buffet</h2>
-                    <p>
-                        Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
-                    </p>
+                    <div class="media">
+                        <div class="media-body">
+                            <h2>Weekend Grand Buffet <span class="badge badge-danger">New</span></h2>
+                            <p class="d-none d-sm-block">
+                                Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person
+                            </p>
+                        </div>
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="Alberto Somayya">
+                    </div>
+
                 </div>
             </div>
 
             <div class="row row-content align-items-center">
-                <div class="col col-sm order-sm-first col-md">
+                <div class="col-12 col-sm-4 order-sm-last col-md-3">
                     <h3>Meet our Culinary Specialists</h3>
                 </div>
                 <div class="col col-sm col-md">
-                    <h2>Alberto Somayya</h2>
-                    <h4>Executive Chef</h4>
-                    <p>
-                        Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
-                    </p>
+                    <div class="media">
+
+                        <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/alberto.png" alt="Alberto Somayya">
+
+                        <div class="media-body">
+
+                            <h2 class="mt-0">Alberto Somayya</h2>
+
+                            <h4>Executive Chef</h4>
+
+                            <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences.
+
+                            </p>
+
+                        </div>
+
+                    </div>
                 </div>
+            </div>
+            <div class="row row-content row-width align-items-center ">
+                <form class="form-width container border p-0" onsubmit="event.preventDefault();handleSubmit();" id="forms">
+                    <div class="px-3 py-2 bg-warning">
+
+                        <h3 class="text-white">Reserve a Table</h3>
+                    </div>
+                    <div class="row ml-3 mt-3">
+                        <div class="col-12 col-md-2 font-weight-bold">
+                            <p>Number of Guests</p>
+                        </div>
+                        <div class="col-12 col-md-10">
+                            <input type="radio" id="1" name="cb"><label class="ml-1 mr-2" for="1">1</label>
+                            <input type="radio" id="2" name="cb"><label class="ml-1 mr-2" for="2">2</label>
+                            <input type="radio" id="3" name="cb"><label class="ml-1 mr-2" for="3">3</label>
+                            <input type="radio" id="4" name="cb"><label class="ml-1 mr-2" for="4">4</label>
+                            <input type="radio" id="5" name="cb"><label class="ml-1 mr-2" for="5">5</label>
+                            <input type="radio" id="6" name="cb"><label class="ml-1 mr-2" for="6">6</label>
+                        </div>
+                    </div>
+                    <div class="row ml-3 mt-3">
+                        <p class="col-12 col-md-2 font-weight-bold">Date and Time</p>
+                        <div class="col-12 col-md-10">
+                            <input type="text" class=" border py-1 px-1 rounded" placeholder="Date">
+                            <input type="text" class=" border py-1 px-1 rounded" placeholder="Time"></div>
+                    </div>
+                    <div class="col-md-9 col-12 mt-md-3 mt-5 ">
+                        <button class=" mgl mb-4 bg-primary text-white border-0 px-2 py-1 font-weight-bold rounded cursor-pointer">Reserve</button>
+                    </div>
+                </form>
             </div>
         </div>
 
