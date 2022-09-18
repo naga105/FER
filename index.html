@@ -43,7 +43,7 @@
                 </ul>
             </div>
         </div>
-        <span class="navbar-text cursor-pointer">
+        <span class="navbar-text  cursor-pointer">
 <a data-toggle="modal" data-target="#loginModal">
 <span class="fa fa-sign-in"></span> Login</a>
         </span>
@@ -95,7 +95,7 @@
                 <div class="col-12 col-sm-3 align-self-center">
                     <img src="img/logo.png" class="img-fluid" />
                 </div>
-                <div class=" col-12 mt-md-0 mt-4 col-sm-3 align-self-center"><a role="button" class="btn btn-block nav-link btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reserveform">Reserve Table</a></div>
+                <div class=" col-12 mt-md-0 mt-4 col-sm-3 align-self-center"><a role="button" class="btn btn-block btn-width nav-link btn-warning" data-toggle="modal" data-target="#formModal" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" href="#reserveform">Reserve Table</a></div>
             </div>
         </div>
     </header>
@@ -205,7 +205,7 @@
                 </div>
             </div>
         </div>
-        <div class="row row-content row-width align-items-center ">
+        <!-- <div class="row row-content row-width align-items-center ">
             <form class="form-width container border p-0" onsubmit="event.preventDefault();handleSubmit();" id="forms">
                 <div class="px-3 py-2 bg-warning">
                     <h3 class="text-white">Reserve a Table</h3>
@@ -251,60 +251,130 @@
                     <button class=" mgl mb-4 bg-primary text-white border-0 px-2 py-1 font-weight-bold rounded cursor-pointer">Reserve</button>
                 </div>
             </form>
+        </div> -->
+        <div id="formModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Reserve a Table </h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="container p-0" onsubmit="event.preventDefault();handleSubmit();" id="forms">
+                            <div class="row ml-3 mt-3">
+                                <div class="col-12 col-md-2 font-weight-bold">
+                                    <p>Number of Guests</p>
+                                </div>
+                                <div class="col-12 custom-control custom-radio col-md-10">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="1" name="checkboxform" class="custom-control-input">
+                                        <label class="custom-control-label" for="1">1</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="2" name="checkboxform" class="custom-control-input">
+                                        <label class="custom-control-label" for="2">2</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="3" name="checkboxform" class="custom-control-input">
+                                        <label class="custom-control-label" for="3">3</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="4" name="checkboxform" class="custom-control-input">
+                                        <label class="custom-control-label" for="4">4</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="5" name="checkboxform" class="custom-control-input">
+                                        <label class="custom-control-label" for="5">5</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="6" name="checkboxform" class="custom-control-input">
+                                        <label class="custom-control-label" for="6">6</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ml-3 mt-3">
+                                <div class="col-12 col-md-2 font-weight-bold">
+                                    <p>Section</p>
+                                </div>
+                                <div class="col-12 col-md-10 d-flex">
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="nonsmoking" autocomplete="off" checked> Non-Smoking
+                                         </label>
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="smoking" autocomplete="off">Smoking
+                                         </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ml-3 mt-3 ">
+                                <p class="col-12 col-md-2 font-weight-bold ">Date and Time</p>
+                                <div class="col-12 col-md-10 ">
+                                    <input type="text " class=" border py-1 px-1 rounded " placeholder="Date ">
+                                    <input type="text " class=" border py-1 px-1 rounded " placeholder="Time "></div>
+                            </div>
+                            <div class="col-md-9 col-12 mt-md-3 mt-5 ">
+                                <button class=" mgl mb-4 bg-secondary text-white border-0 px-2 py-1 font-weight-bold rounded cursor-pointer " data-dismiss="modal ">Cancel</button>
+                                <button class=" mb-4 bg-primary text-white border-0 px-2 py-1 font-weight-bold rounded cursor-pointer ">Reserve</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-4 offset-1 col-sm-2">
+    <footer class="footer ">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-4 offset-1 col-sm-2 ">
                     <h5>Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul class="list-unstyled ">
+                        <li><a href="# ">Home</a></li>
+                        <li><a href="# ">About</a></li>
+                        <li><a href="# ">Menu</a></li>
+                        <li><a href="# ">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-7 col-sm-5">
+                <div class="col-7 col-sm-5 ">
                     <h5>Our Address</h5>
                     <address>
               121, Clear Water Bay Road<br />
               Clear Water Bay, Kowloon<br />
               HONG KONG<br />
-              <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br />
+              <i class="fa fa-phone fa-lg "></i>: +852 1234 5678<br />
 
-              <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br />
+              <i class="fa fa-fax fa-lg "></i>: +852 8765 4321<br />
 
-              <i class="fa fa-envelope fa-lg"></i>:
+              <i class="fa fa-envelope fa-lg "></i>:
 
-              <a href="mailto:confusion@food.net">confusion@food.net</a>
+              <a href="mailto:confusion@food.net ">confusion@food.net</a>
             </address>
                 </div>
-                <div class="col-12 col-sm-4 align-self-center">
-                    <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i
+                <div class="col-12 col-sm-4 align-self-center ">
+                    <div class="text-center ">
+                        <a class="btn btn-social-icon btn-google " href="http://google.com/+ "><i class="fa fa-google-plus "></i
               ></a>
 
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i
+                        <a class="btn btn-social-icon btn-facebook " href="http://www.facebook.com/profile.php?id="><i class=" fa fa-facebook "></i
               ></a>
 
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i
+                        <a class="btn btn-social-icon btn-linkedin " href="http://www.linkedin.com/in/ "><i class="fa fa-linkedin "></i
               ></a>
 
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i
+                        <a class="btn btn-social-icon btn-twitter " href="http://twitter.com/ "><i class="fa fa-twitter "></i
               ></a>
 
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i
+                        <a class="btn btn-social-icon btn-google " href="http://youtube.com/ "><i class="fa fa-youtube "></i
               ></a>
 
-                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i
+                        <a class="btn btn-social-icon " href="mailto: "><i class="fa fa-envelope-o "></i
               ></a>
                     </div>
                 </div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-auto">
+            <div class="row justify-content-center ">
+                <div class="col-auto ">
                     <p>© Copyright 2018 Ristorante Con Fusion</p>
                 </div>
             </div>

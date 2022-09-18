@@ -57,10 +57,15 @@ html {
 
 @media (min-width: 768px) {
   .mgl {
-    margin-left: 121px;
+    margin-left: 142px;
   }
   .btn-width {
     width: 12rem;
+  }
+}
+@media (min-width: 576px) {
+  .btn-width {
+    width: 11rem;
   }
 }
 
@@ -128,4 +133,7 @@ body {
   bottom: 0px;
 
   z-index: 1;
+}
+.display-none {
+  display: none;
 }
