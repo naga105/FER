@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no" />
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <!-- <link rel="stylesheet/scss" type="text/css" href="index.scss" /> -->
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
 
     <title>Document</title>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
@@ -55,13 +55,13 @@
         <a id="loginForm"> <span class="fa fa-sign-in"></span> Login</a>
                         </span>
     </nav>
-    <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
+    <div id="loginModal" class="modal fade">
+        <div class="modal-dialog modal-lg">
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close dismiss">&times;</button>
+                    <button type="button" class="close dismiss floral-white">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form>
@@ -98,7 +98,7 @@
                     <button type="button" class="btn btn-secondary btn-sm ml-auto dismiss">
                   Cancel
                 </button>
-                    <button type="submit" class="btn btn-primary btn-sm ml-1">
+                    <button type="submit" class="btn btn-primary btn-sm ml-1 cursor-pointer">
                   Sign in
                 </button>
                 </div>
@@ -278,6 +278,54 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="row row-content row-width align-items-center ">
+            <form class="form-width container border p-0" onsubmit="event.preventDefault();handleSubmit();" id="forms">
+                <div class="px-3 py-2 bg-warning">
+                    <h3 class="text-white">Reserve a Table</h3>
+                </div>
+                <div class="row ml-3 mt-3">
+                    <div class="col-12 col-md-2 font-weight-bold">
+                        <p>Number of Guests</p>
+                    </div>
+                    <div class="col-12 custom-control custom-radio col-md-10">
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="1" name="checkboxform" class="custom-control-input">
+                            <label class="custom-control-label" for="1">1</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="2" name="checkboxform" class="custom-control-input">
+                            <label class="custom-control-label" for="2">2</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="3" name="checkboxform" class="custom-control-input">
+                            <label class="custom-control-label" for="3">3</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="4" name="checkboxform" class="custom-control-input">
+                            <label class="custom-control-label" for="4">4</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="5" name="checkboxform" class="custom-control-input">
+                            <label class="custom-control-label" for="5">5</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="6" name="checkboxform" class="custom-control-input">
+                            <label class="custom-control-label" for="6">6</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ml-3 mt-3">
+                    <p class="col-12 col-md-2 font-weight-bold">Date and Time</p>
+                    <div class="col-12 col-md-10">
+                        <input type="text" class=" border py-1 px-1 rounded" placeholder="Date">
+                        <input type="text" class=" border py-1 px-1 rounded" placeholder="Time"></div>
+                </div>
+                <div class="col-md-9 col-12 mt-md-3 mt-5 ">
+                    <button class=" mgl mb-4 bg-primary text-white border-0 px-2 py-1 font-weight-bold rounded cursor-pointer">Reserve</button>
+                </div>
+            </form>
+        </div> -->
+
         <div id="formModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
